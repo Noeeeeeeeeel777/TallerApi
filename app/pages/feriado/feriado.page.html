@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>feriado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="warning">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+          *ngFor="let dato of datos">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle> {{dato.date}}
+              </ion-card-subtitle>
+              <ion-card-title>{{dato.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p> <b>Tipo:</b>
+                {{dato.type}}
+              </p>
+              <p> <b>Inalienable:</b>
+                {{dato.inalienable}}
+              </p>
+              <p> <b>Info extra:</b>
+                {{dato.extra}}
+              </p>
+            </ion-card-content>
+          </ion-card>
+
+
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
